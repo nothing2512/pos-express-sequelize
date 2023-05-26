@@ -31,11 +31,11 @@ module.exports = (sequelize => sequelize.define("barang", {
         allowNull: false
     },
     created_at: {
-        type: DataTypes.DATETIME,
+        type: DataTypes.DATE,
         allowNull: false
     },
     updated_at: {
-        type: DataTypes.DATETIME,
+        type: DataTypes.DATE,
         allowNull: false
     }
 }))

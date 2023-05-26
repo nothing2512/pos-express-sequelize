@@ -19,11 +19,11 @@ module.exports = (sequelize => sequelize.define("pembelian", {
         allowNull: false
     },
     created_at: {
-        type: DataTypes.DATETIME,
+        type: DataTypes.DATE,
         allowNull: false
     },
     updated_at: {
-        type: DataTypes.DATETIME,
+        type: DataTypes.DATE,
         allowNull: false
     }
 }))
