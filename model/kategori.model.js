@@ -11,11 +11,11 @@ module.exports = (sequelize => sequelize.define("kategori", {
         allowNull: false
     },
     created_at: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATETIME,
         allowNull: false
     },
     updated_at: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATETIME,
         allowNull: false
     }
 }))
