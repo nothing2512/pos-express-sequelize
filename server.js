@@ -1,6 +1,7 @@
 const connection = require("./model/connection"),
     express = require("express"),
-    cors = require("cors")
+    cors = require("cors"),
+    route = require("./router")
 
 connection.getConnectionAsync()
     .then((db) => {
@@ -14,6 +15,8 @@ connection.getConnectionAsync()
         app.use(express.urlencoded({
             extended: true
         }))
+
+        route(app, db)
 
         const PORT = process.env.PORT || 3333
         app.listen(PORT, () => {
