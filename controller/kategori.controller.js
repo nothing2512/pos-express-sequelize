@@ -13,6 +13,14 @@ exports.detail = async (db, req, res) => {
             id: req.params.id
         }
     })
+    if (kategori == null) {
+        res.json({
+            status: false,
+            message: "kategori tidak ditemukan",
+            data: null
+        })
+        return
+    }
     res.json({
         status: true,
         message: "",

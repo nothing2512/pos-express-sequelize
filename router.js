@@ -19,7 +19,7 @@ function get(app, db, endpoint, controller) {
 }
 
 function post(app, db, endpoint, controller) {
-    app.get(endpoint, async (req, res) => {
+    app.post(endpoint, async (req, res) => {
         await route(db, req, res, controller)
     })
 }
